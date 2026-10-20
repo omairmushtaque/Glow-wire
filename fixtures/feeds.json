@@ -1,0 +1,76 @@
+[
+ {
+  "name": "Gloss Daily",
+  "url": "https://glossdaily.example/feed",
+  "kind": "editorial",
+  "weight": 5
+ },
+ {
+  "name": "The Powder Room",
+  "url": "https://thepowderroom.example/feed",
+  "kind": "editorial",
+  "weight": 4
+ },
+ {
+  "name": "Trade Beauty Weekly",
+  "url": "https://tradebeautyweekly.example/feed",
+  "kind": "trade",
+  "weight": 5
+ },
+ {
+  "name": "Skin Notes",
+  "url": "https://skinnotes.example/feed",
+  "kind": "blog",
+  "weight": 2,
+  "filter": "beauty"
+ },
+ {
+  "name": "r/SampleSkincare",
+  "url": "https://r/sampleskincare.example/feed",
+  "kind": "community",
+  "weight": 1
+ },
+ {
+  "name": "Safety Desk",
+  "url": "https://safetydesk.example/feed",
+  "kind": "alert",
+  "weight": 4,
+  "filter": "cosmetic"
+ },
+ {
+  "name": "Mirror Feed",
+  "url": "https://mirrorfeed.example/feed",
+  "kind": "editorial",
+  "weight": 3
+ },
+ {
+  "name": "Gulf Glam",
+  "url": "https://gulfglam.example/feed",
+  "kind": "editorial",
+  "weight": 3
+ },
+ {
+  "name": "Broken Feed",
+  "url": "https://brokenfeed.example/feed",
+  "kind": "blog",
+  "weight": 1
+ },
+ {
+  "name": "Missing Feed",
+  "url": "https://missingfeed.example/feed",
+  "kind": "blog",
+  "weight": 1
+ },
+ {
+  "name": "Dusty Blog",
+  "url": "https://dustyblog.example/feed",
+  "kind": "blog",
+  "weight": 1
+ },
+ {
+  "name": "Empty Feed",
+  "url": "https://emptyfeed.example/feed",
+  "kind": "blog",
+  "weight": 1
+ }
+]

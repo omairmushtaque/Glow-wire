@@ -1,0 +1,197 @@
+{
+ "updated": "2026-10-20T06:00:00+00:00",
+ "stories": [
+  {
+   "id": "1b10393fbd",
+   "title": "Lumiere Labs launches $38 vitamin C serum at Sephora",
+   "url": "https://glossdaily.example/lumiere-labs-vitamin-c-serum",
+   "source": "Gloss Daily",
+   "published": "2026-10-19T14:00:00+00:00",
+   "updated": "2026-10-20T03:30:00+00:00",
+   "more": [
+    {
+     "source": "Trade Beauty Weekly",
+     "url": "https://tradebeauty.example/lumiere-debut"
+    },
+    {
+     "source": "The Powder Room",
+     "url": "https://powderroom.example/lumiere-serum-sephora"
+    },
+    {
+     "source": "Gulf Glam",
+     "url": "https://gulfglam.example/lumiere-serum-middle-east"
+    }
+   ],
+   "image": {
+    "url": "https://picsum.photos/seed/serum/240/240",
+    "credit": "Gloss Daily"
+   },
+   "tags": [
+    "launches"
+   ],
+   "price": {
+    "amt": 38.0,
+    "cur": "USD"
+   },
+   "score": 3.9962,
+   "summary": "Lumiere Labs has put its first vitamin C serum on sale at Sephora, priced at $38. Several outlets say stock is limited for now, and a rollout to Middle East stores has started too."
+  },
+  {
+   "id": "f2a1b05e0f",
+   "title": "Aurelia Group to acquire Marlowe Skin",
+   "url": "https://tradebeauty.example/aurelia-marlowe-acquisition",
+   "source": "Trade Beauty Weekly",
+   "published": "2026-10-19T10:20:00+00:00",
+   "updated": "2026-10-19T13:45:00+00:00",
+   "more": [
+    {
+     "source": "Gloss Daily",
+     "url": "https://glossdaily.example/aurelia-marlowe"
+    },
+    {
+     "source": "The Powder Room",
+     "url": "https://powderroom.example/aurelia-acquires-marlowe"
+    }
+   ],
+   "image": null,
+   "tags": [
+    "business"
+   ],
+   "price": null,
+   "score": 1.9255,
+   "summary": "Aurelia Group is buying the skincare brand Marlowe Skin. No financial terms were given, though one trade outlet reads the move as a way for Aurelia to build out its skincare range."
+  },
+  {
+   "id": "102e08bfaf",
+   "title": "Cosmo Expo Dubai 2026 opens with 400 brands",
+   "url": "https://tradebeauty.example/cosmo-expo-dubai",
+   "source": "Trade Beauty Weekly",
+   "published": "2026-10-20T04:00:00+00:00",
+   "updated": "2026-10-20T04:00:00+00:00",
+   "more": [],
+   "image": null,
+   "tags": [
+    "events"
+   ],
+   "price": null,
+   "score": 1.8517,
+   "summary": "Cosmo Expo Dubai has opened with around 400 brands taking part. Fragrance and skincare drew most of the attention on the first day."
+  },
+  {
+   "id": "63c64fc15d",
+   "title": "Dune Beauty recalls SPF 50 stick after contamination finding",
+   "url": "https://glossdaily.example/dune-beauty-spf-recall",
+   "source": "Gloss Daily",
+   "published": "2026-10-19T09:30:00+00:00",
+   "updated": "2026-10-19T12:40:00+00:00",
+   "more": [
+    {
+     "source": "Safety Desk",
+     "url": "https://safetydesk.example/dune-beauty-recall"
+    },
+    {
+     "source": "The Powder Room",
+     "url": "https://powderroom.example/dune-recall"
+    }
+   ],
+   "image": {
+    "url": "https://picsum.photos/seed/spf/240/240",
+    "credit": "Gloss Daily"
+   },
+   "tags": [
+    "safety"
+   ],
+   "price": null,
+   "score": 1.8468,
+   "summary": "Dune Beauty is pulling a batch of its SPF 50 sunscreen sticks after a possible bacterial contamination was found. Anyone who owns one is told to stop using the affected lots."
+  },
+  {
+   "id": "639dfc9ba8",
+   "title": "Anyone else obsessed with this $9 lip oil from Petal & Pine?",
+   "url": "https://reddit.example/r/sample/lip-oil",
+   "source": "r/SampleSkincare",
+   "published": "2026-10-19T20:00:00+00:00",
+   "updated": "2026-10-19T20:00:00+00:00",
+   "more": [],
+   "image": null,
+   "tags": [
+    "trending"
+   ],
+   "price": {
+    "amt": 9.0,
+    "cur": "USD"
+   },
+   "score": 0.8165,
+   "summary": "A Reddit post about a $9 Petal & Pine lip oil is one of the day's top posts in a skincare community, with people sharing whether they like it."
+  },
+  {
+   "id": "eaf553513e",
+   "title": "Petal & Pine mascara drops to \u00a312 in early Black Friday sale",
+   "url": "https://powderroom.example/petal-pine-mascara-sale",
+   "source": "The Powder Room",
+   "published": "2026-10-19T08:00:00+00:00",
+   "updated": "2026-10-19T08:00:00+00:00",
+   "more": [],
+   "image": {
+    "url": "https://picsum.photos/seed/mascara/240/240",
+    "credit": "The Powder Room"
+   },
+   "tags": [
+    "deals"
+   ],
+   "price": {
+    "amt": 12.0,
+    "cur": "GBP"
+   },
+   "score": 0.7715,
+   "summary": "Petal & Pine's lengthening mascara is down to \u00a312 as the brand starts its Black Friday sale early. The discount runs until Sunday, according to The Powder Room."
+  },
+  {
+   "id": "ac1852741e",
+   "title": "Sunscreen recall roundup for October",
+   "url": "https://mirror.example/roundup-1",
+   "source": "Mirror Feed",
+   "published": "2026-10-19T10:00:00+00:00",
+   "updated": "2026-10-19T10:00:00+00:00",
+   "more": [],
+   "image": null,
+   "tags": [
+    "safety"
+   ],
+   "price": null,
+   "score": 0.7407,
+   "summary": "This roundup collects the sunscreen recalls announced during October, in one list."
+  },
+  {
+   "id": "e21b2a5d26",
+   "title": "My honest review of the Marlowe Skin barrier cream",
+   "url": "https://skinnotes.example/marlowe-barrier-cream-review",
+   "source": "Skin Notes",
+   "published": "2026-10-19T07:00:00+00:00",
+   "updated": "2026-10-19T07:00:00+00:00",
+   "more": [],
+   "image": null,
+   "tags": [],
+   "price": null,
+   "score": 0.5774,
+   "summary": "A blogger tried the barrier cream from Marlowe Skin for two weeks on dry cheeks and writes up how it went."
+  },
+  {
+   "id": "a34dd5484c",
+   "title": "How to layer retinol and niacinamide without irritation",
+   "url": "https://glossdaily.example/retinol-niacinamide-layering",
+   "source": "Gloss Daily",
+   "published": "2026-10-18T16:00:00+00:00",
+   "updated": "2026-10-18T16:00:00+00:00",
+   "more": [],
+   "image": {
+    "url": "https://picsum.photos/seed/retinol/240/240",
+    "credit": "Gloss Daily"
+   },
+   "tags": [],
+   "price": null,
+   "score": 0.4629,
+   "summary": "A dermatologist explains how to combine retinol and niacinamide in one routine, covering the order to apply them and how far apart to use them to keep irritation down."
+  }
+ ]
+}

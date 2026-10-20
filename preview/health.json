@@ -1,0 +1,140 @@
+{
+ "updated": "2026-10-20T06:00:00+00:00",
+ "healthy": 8,
+ "total": 12,
+ "feeds": [
+  {
+   "name": "Gloss Daily",
+   "kind": "editorial",
+   "status": "ok",
+   "items": 4,
+   "url": "https://glossdaily.example/feed",
+   "http": 200,
+   "ms": 3,
+   "newest": "2026-10-19T14:00:00+00:00",
+   "age_days": 0.7,
+   "kept": 4
+  },
+  {
+   "name": "The Powder Room",
+   "kind": "editorial",
+   "status": "ok",
+   "items": 4,
+   "url": "https://thepowderroom.example/feed",
+   "http": 200,
+   "ms": 1,
+   "newest": "2026-10-19T16:30:00+00:00",
+   "age_days": 0.6,
+   "kept": 4
+  },
+  {
+   "name": "Trade Beauty Weekly",
+   "kind": "trade",
+   "status": "ok",
+   "items": 3,
+   "url": "https://tradebeautyweekly.example/feed",
+   "http": 200,
+   "ms": 0,
+   "newest": "2026-10-20T04:00:00+00:00",
+   "age_days": 0.1,
+   "kept": 3
+  },
+  {
+   "name": "Skin Notes",
+   "kind": "blog",
+   "status": "ok",
+   "items": 2,
+   "url": "https://skinnotes.example/feed",
+   "http": 200,
+   "ms": 0,
+   "newest": "2026-10-19T18:00:00+00:00",
+   "age_days": 0.5,
+   "kept": 1
+  },
+  {
+   "name": "r/SampleSkincare",
+   "kind": "community",
+   "status": "ok",
+   "items": 1,
+   "url": "https://r/sampleskincare.example/feed",
+   "http": 200,
+   "ms": 1,
+   "newest": "2026-10-19T20:00:00+00:00",
+   "age_days": 0.4,
+   "kept": 1
+  },
+  {
+   "name": "Safety Desk",
+   "kind": "alert",
+   "status": "ok",
+   "items": 2,
+   "url": "https://safetydesk.example/feed",
+   "http": 200,
+   "ms": 2,
+   "newest": "2026-10-19T12:40:00+00:00",
+   "age_days": 0.7,
+   "kept": 1
+  },
+  {
+   "name": "Mirror Feed",
+   "kind": "editorial",
+   "status": "ok",
+   "items": 3,
+   "url": "https://mirrorfeed.example/feed",
+   "http": 200,
+   "ms": 1,
+   "newest": "2026-10-19T14:05:00+00:00",
+   "age_days": 0.7,
+   "kept": 3
+  },
+  {
+   "name": "Gulf Glam",
+   "kind": "editorial",
+   "status": "ok",
+   "items": 1,
+   "url": "https://gulfglam.example/feed",
+   "http": 200,
+   "ms": 0,
+   "newest": "2026-10-20T03:30:00+00:00",
+   "age_days": 0.1,
+   "kept": 1
+  },
+  {
+   "name": "Broken Feed",
+   "kind": "blog",
+   "status": "error",
+   "items": 0,
+   "url": "https://brokenfeed.example/feed",
+   "error": "not valid XML (no element found: line 1, column 45)"
+  },
+  {
+   "name": "Missing Feed",
+   "kind": "blog",
+   "status": "error",
+   "items": 0,
+   "url": "https://missingfeed.example/feed",
+   "http": 404,
+   "error": "HTTP 404"
+  },
+  {
+   "name": "Dusty Blog",
+   "kind": "blog",
+   "status": "stale",
+   "items": 1,
+   "url": "https://dustyblog.example/feed",
+   "http": 200,
+   "ms": 0,
+   "newest": "2026-07-01T10:00:00+00:00",
+   "age_days": 110.8
+  },
+  {
+   "name": "Empty Feed",
+   "kind": "blog",
+   "status": "empty",
+   "items": 0,
+   "url": "https://emptyfeed.example/feed",
+   "http": 200,
+   "ms": 0
+  }
+ ]
+}

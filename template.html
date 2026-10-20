@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SITE_NAME}}: women's beauty news and products, grouped by story</title>
+<meta name="description" content="{{TAGLINE}} Updated through the day from {{SOURCES}} sources.">
+<meta name="theme-color" content="#F7F6F3">
+{{ROBOTS}}
+<link rel="icon" href="data:,">
+<style>
+:root{--bg:#F7F6F3;--card:#fff;--ink:#2F3437;--mute:#787774;--line:#EAEAEA;--btn:#111;--btnink:#fff;
+--red:#FDEBEC;--redk:#9F2F2D;--blue:#E1F3FE;--bluek:#1F6C9F;--green:#EDF3EC;--greenk:#346538;--yellow:#FBF3DB;--yellowk:#956400;--gray:#EFEEEA;--grayk:#5c5a56}
+@media (prefers-color-scheme:dark){:root{--bg:#191919;--card:#202020;--ink:#E6E4DF;--mute:#9B9A97;--line:#2E2E2E;--btn:#E6E4DF;--btnink:#191919;
+--red:#3B2423;--redk:#F2A7A3;--blue:#1E2E39;--bluek:#8EC5EA;--green:#232F24;--greenk:#9CCB9F;--yellow:#38301D;--yellowk:#E3BC62;--gray:#2A2927;--grayk:#B5B2AB}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "SF Pro Text","Helvetica Neue",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header.top{padding:40px 0 16px}
+h1{font:600 34px/1.1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.03em;margin:0}
+.tagline{color:var(--mute);margin:8px 0 24px}
+.bar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;max-width:100%}
+.chip{font:inherit;font-size:13px;line-height:1;white-space:nowrap;padding:9px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;cursor:pointer}
+.chip.on{background:var(--btn);color:var(--btnink);border-color:var(--btn)}
+.cur{font-size:13px;color:var(--mute);display:flex;gap:8px;align-items:center}
+select{font:inherit;font-size:13px;padding:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;max-width:190px}
+.sample{background:var(--yellow);color:var(--yellowk);border-radius:8px;padding:12px 16px;font-size:14px;margin:16px 0 0}
+.story{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line)}
+.body{min-width:0;flex:1}
+h2{font:600 20px/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.015em;margin:0}
+h2 a{text-decoration:none}
+h2 a:hover{text-decoration:underline;text-underline-offset:3px}
+.src{font:500 12px/1 "SF Pro Text","Helvetica Neue",system-ui,sans-serif;letter-spacing:0;color:var(--mute);white-space:nowrap;margin-left:4px}
+.sum{margin:8px 0 0;font-size:15px}
+.meta{margin:10px 0 0;font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.tag{font-size:10px;line-height:1;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:9999px;background:var(--gray);color:var(--grayk)}
+.t-safety{background:var(--red);color:var(--redk)}.t-deals{background:var(--green);color:var(--greenk)}
+.t-launches{background:var(--blue);color:var(--bluek)}.t-business,.t-events{background:var(--yellow);color:var(--yellowk)}
+.price{font-weight:600;color:var(--ink)}.conv{font-weight:400;color:var(--mute)}
+.more{margin:8px 0 0;font-size:13px;color:var(--mute)}
+.more a{text-underline-offset:3px}
+.thumb{flex:none;width:88px;height:88px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--gray)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover}
+#empty{padding:32px 0;color:var(--mute)}
+footer{padding:32px 0 56px;font-size:13px;color:var(--mute)}
+footer p{margin:0 0 12px;max-width:62ch}
+@media (min-width:640px){.thumb{width:120px;height:120px}h1{font-size:42px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>{{SITE_NAME}}</h1>
+  <p class="tagline">{{TAGLINE}}</p>
+  <div class="bar">
+    <div class="chips" role="group" aria-label="Filter stories">{{CHIPS}}</div>
+    <label class="cur">Prices in <select id="cur" aria-label="Currency"></select></label>
+  </div>
+  {{BANNER}}
+</header>
+<main id="list">
+{{STORIES}}
+</main>
+<p id="empty" hidden>No stories under this filter right now.</p>
+<footer>
+  <p>{{COUNT}} stories from {{SOURCES}} sources. Updated <time id="upd" datetime="{{UPDATED_ISO}}">{{UPDATED_HUMAN}}</time>.</p>
+  <p>Every headline links to the outlet that published it. Summaries are written by an AI model from the headlines and can be wrong, so check the source before you buy anything. Thumbnails are loaded from the outlet's own site and belong to it.</p>
+  <p>Some links on this site may become affiliate links. When they do, we will say so next to the link, and we may earn a commission at no extra cost to you.</p>
+  <p>Prices shown in the headline's own currency. The converted amount is an estimate using <a href="https://www.exchangerate-api.com">ExchangeRate-API</a> rates ({{FX_DATE}}). Stores price differently by country, so check the store's own page.</p>
+</footer>
+</div>
+<script type="application/json" id="fx">{{RATES_JSON}}</script>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+function safe(f){try{return f()}catch(e){}}
+var FX=JSON.parse($('#fx').textContent);
+
+// filter chips
+var chips=$$('.chip'),stories=$$('.story');
+function setFilter(f){
+  var shown=0;
+  chips.forEach(function(c){var on=c.dataset.f===f;c.classList.toggle('on',on);c.setAttribute('aria-pressed',on)});
+  stories.forEach(function(s){var ok=f==='all'||s.dataset.tags.split(' ').indexOf(f)>-1;s.hidden=!ok;if(ok)shown++});
+  $('#empty').hidden=shown>0;
+  safe(function(){history.replaceState(null,'',f==='all'?location.pathname+location.search:'#'+f)});
+}
+chips.forEach(function(c){c.addEventListener('click',function(){setFilter(c.dataset.f)})});
+var h=location.hash.slice(1);
+setFilter(chips.some(function(c){return c.dataset.f===h})?h:'all');
+
+// currency: saved choice, else timezone, else language region, else USD (a guess; the menu overrides it)
+var TZ={'Asia/Dubai':'AED','Asia/Muscat':'OMR','Asia/Riyadh':'SAR','Asia/Qatar':'QAR','Asia/Kuwait':'KWD','Asia/Bahrain':'BHD','Asia/Karachi':'PKR','Asia/Kolkata':'INR','Asia/Calcutta':'INR','Asia/Dhaka':'BDT','Asia/Colombo':'LKR','Asia/Singapore':'SGD','Asia/Kuala_Lumpur':'MYR','Asia/Jakarta':'IDR','Asia/Manila':'PHP','Asia/Bangkok':'THB','Asia/Ho_Chi_Minh':'VND','Asia/Seoul':'KRW','Asia/Tokyo':'JPY','Asia/Shanghai':'CNY','Asia/Hong_Kong':'HKD','Asia/Taipei':'TWD','Asia/Jerusalem':'ILS','Asia/Amman':'JOD','Asia/Baghdad':'IQD','Europe/London':'GBP','Europe/Zurich':'CHF','Europe/Stockholm':'SEK','Europe/Oslo':'NOK','Europe/Copenhagen':'DKK','Europe/Warsaw':'PLN','Europe/Prague':'CZK','Europe/Budapest':'HUF','Europe/Istanbul':'TRY','America/Toronto':'CAD','America/Vancouver':'CAD','America/Edmonton':'CAD','America/Winnipeg':'CAD','America/Halifax':'CAD','America/Mexico_City':'MXN','America/Sao_Paulo':'BRL','America/Bogota':'COP','America/Santiago':'CLP','America/Lima':'PEN','Africa/Cairo':'EGP','Africa/Lagos':'NGN','Africa/Johannesburg':'ZAR','Africa/Nairobi':'KES','Africa/Casablanca':'MAD','Pacific/Auckland':'NZD'};
+var AREA={Europe:'EUR',America:'USD',Australia:'AUD'};
+var REG={AE:'AED',SA:'SAR',QA:'QAR',KW:'KWD',BH:'BHD',OM:'OMR',GB:'GBP',US:'USD',CA:'CAD',AU:'AUD',NZ:'NZD',IN:'INR',PK:'PKR',DE:'EUR',FR:'EUR',ES:'EUR',IT:'EUR',NL:'EUR',IE:'EUR',SG:'SGD',MY:'MYR',PH:'PHP',ZA:'ZAR',EG:'EGP',NG:'NGN',JP:'JPY',KR:'KRW',CN:'CNY',HK:'HKD',BR:'BRL',MX:'MXN',TR:'TRY',CH:'CHF',SE:'SEK',NO:'NOK',DK:'DKK',PL:'PLN'};
+function guess(){
+  var tz=safe(function(){return Intl.DateTimeFormat().resolvedOptions().timeZone})||'',c=TZ[tz]||AREA[tz.split('/')[0]];
+  var langs=navigator.languages||[navigator.language];
+  for(var i=0;!c&&i<langs.length;i++){var r=safe(function(){return new Intl.Locale(langs[i]).region});if(r&&REG[r])c=REG[r]}
+  return c&&FX.rates[c]?c:'USD';
+}
+var sel=$('#cur'),names=safe(function(){return new Intl.DisplayNames(['en'],{type:'currency'})});
+Object.keys(FX.rates).sort().forEach(function(code){
+  var o=document.createElement('option');o.value=code;o.textContent=code+(names?' - '+(safe(function(){return names.of(code)})||''):'');sel.appendChild(o);
+});
+function convert(to){
+  $$('.price').forEach(function(p){
+    var old=p.querySelector('.conv');if(old)old.remove();
+    var from=p.dataset.cur,amt=+p.dataset.amt;
+    if(from===to||!FX.rates[from]||!FX.rates[to])return;
+    var v=amt/FX.rates[from]*FX.rates[to];
+    var t=safe(function(){return new Intl.NumberFormat(undefined,{style:'currency',currency:to,maximumFractionDigits:v>=100?0:2}).format(v)})||(to+' '+v.toFixed(2));
+    var s=document.createElement('span');s.className='conv';s.textContent=' ≈ '+t;p.appendChild(s);
+  });
+}
+var cur=safe(function(){return localStorage.getItem('glow-cur')});
+if(!cur||!FX.rates[cur])cur=guess();
+sel.value=cur;convert(cur);
+sel.addEventListener('change',function(){safe(function(){localStorage.setItem('glow-cur',sel.value)});convert(sel.value)});
+
+// relative times, so a cached page never shows stale ages
+function ago(t){var m=Math.round((Date.now()-new Date(t))/6e4);return m<1?'just now':m<60?m+'m ago':m<1440?Math.round(m/60)+'h ago':Math.round(m/1440)+'d ago'}
+$$('time').forEach(function(t){var d=t.getAttribute('datetime');if(d&&t.id!=='upd'){t.title=t.textContent;t.textContent=ago(d)}});
+})();
+</script>
+</body>
+</html>

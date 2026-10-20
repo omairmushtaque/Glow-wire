@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glow Wire: women's beauty news and products, grouped by story</title>
+<meta name="description" content="Everything happening in women&#x27;s beauty, grouped by story. Updated through the day from 8 sources.">
+<meta name="theme-color" content="#F7F6F3">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<style>
+:root{--bg:#F7F6F3;--card:#fff;--ink:#2F3437;--mute:#787774;--line:#EAEAEA;--btn:#111;--btnink:#fff;
+--red:#FDEBEC;--redk:#9F2F2D;--blue:#E1F3FE;--bluek:#1F6C9F;--green:#EDF3EC;--greenk:#346538;--yellow:#FBF3DB;--yellowk:#956400;--gray:#EFEEEA;--grayk:#5c5a56}
+@media (prefers-color-scheme:dark){:root{--bg:#191919;--card:#202020;--ink:#E6E4DF;--mute:#9B9A97;--line:#2E2E2E;--btn:#E6E4DF;--btnink:#191919;
+--red:#3B2423;--redk:#F2A7A3;--blue:#1E2E39;--bluek:#8EC5EA;--green:#232F24;--greenk:#9CCB9F;--yellow:#38301D;--yellowk:#E3BC62;--gray:#2A2927;--grayk:#B5B2AB}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "SF Pro Text","Helvetica Neue",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header.top{padding:40px 0 16px}
+h1{font:600 34px/1.1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.03em;margin:0}
+.tagline{color:var(--mute);margin:8px 0 24px}
+.bar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;max-width:100%}
+.chip{font:inherit;font-size:13px;line-height:1;white-space:nowrap;padding:9px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;cursor:pointer}
+.chip.on{background:var(--btn);color:var(--btnink);border-color:var(--btn)}
+.cur{font-size:13px;color:var(--mute);display:flex;gap:8px;align-items:center}
+select{font:inherit;font-size:13px;padding:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;max-width:190px}
+.sample{background:var(--yellow);color:var(--yellowk);border-radius:8px;padding:12px 16px;font-size:14px;margin:16px 0 0}
+.story{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line)}
+.body{min-width:0;flex:1}
+h2{font:600 20px/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.015em;margin:0}
+h2 a{text-decoration:none}
+h2 a:hover{text-decoration:underline;text-underline-offset:3px}
+.src{font:500 12px/1 "SF Pro Text","Helvetica Neue",system-ui,sans-serif;letter-spacing:0;color:var(--mute);white-space:nowrap;margin-left:4px}
+.sum{margin:8px 0 0;font-size:15px}
+.meta{margin:10px 0 0;font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.tag{font-size:10px;line-height:1;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:9999px;background:var(--gray);color:var(--grayk)}
+.t-safety{background:var(--red);color:var(--redk)}.t-deals{background:var(--green);color:var(--greenk)}
+.t-launches{background:var(--blue);color:var(--bluek)}.t-business,.t-events{background:var(--yellow);color:var(--yellowk)}
+.price{font-weight:600;color:var(--ink)}.conv{font-weight:400;color:var(--mute)}
+.more{margin:8px 0 0;font-size:13px;color:var(--mute)}
+.more a{text-underline-offset:3px}
+.thumb{flex:none;width:88px;height:88px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--gray)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover}
+#empty{padding:32px 0;color:var(--mute)}
+footer{padding:32px 0 56px;font-size:13px;color:var(--mute)}
+footer p{margin:0 0 12px;max-width:62ch}
+@media (min-width:640px){.thumb{width:120px;height:120px}h1{font-size:42px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>Glow Wire</h1>
+  <p class="tagline">Everything happening in women&#x27;s beauty, grouped by story.</p>
+  <div class="bar">
+    <div class="chips" role="group" aria-label="Filter stories"><button class="chip on" data-f="all">All</button><button class="chip" data-f="safety">Safety</button><button class="chip" data-f="deals">Deal</button><button class="chip" data-f="launches">Launch</button><button class="chip" data-f="events">Event</button><button class="chip" data-f="business">Business</button><button class="chip" data-f="trending">Trending</button></div>
+    <label class="cur">Prices in <select id="cur" aria-label="Currency"></select></label>
+  </div>
+  <p class="sample">Sample preview. These stories and outlets are made up so you can see the layout. The live site fills with real stories after its first scheduled update.</p>
+</header>
+<main id="list">
+<article class="story" data-tags="launches"><div class="body"><h2><a href="https://glossdaily.example/lumiere-labs-vitamin-c-serum" rel="noopener">Lumiere Labs launches $38 vitamin C serum at Sephora</a> <span class="src">Gloss Daily</span></h2><p class="sum">Lumiere Labs has put its first vitamin C serum on sale at Sephora, priced at $38. Several outlets say stock is limited for now, and a rollout to Middle East stores has started too.</p><p class="meta"><span class="tag t-launches">Launch</span><span class="price" data-amt="38.0" data-cur="USD">$38</span><time datetime="2026-10-19T14:00:00+00:00">Oct 19, 14:00 UTC</time></p><p class="more">More: <a href="https://tradebeauty.example/lumiere-debut" rel="noopener">Trade Beauty Weekly</a>, <a href="https://powderroom.example/lumiere-serum-sephora" rel="noopener">The Powder Room</a>, <a href="https://gulfglam.example/lumiere-serum-middle-east" rel="noopener">Gulf Glam</a></p></div><a class="thumb" href="https://glossdaily.example/lumiere-labs-vitamin-c-serum" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/serum/240/240" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" title="Photo: Gloss Daily" onerror="this.parentNode.remove()"></a></article>
+<article class="story" data-tags="business"><div class="body"><h2><a href="https://tradebeauty.example/aurelia-marlowe-acquisition" rel="noopener">Aurelia Group to acquire Marlowe Skin</a> <span class="src">Trade Beauty Weekly</span></h2><p class="sum">Aurelia Group is buying the skincare brand Marlowe Skin. No financial terms were given, though one trade outlet reads the move as a way for Aurelia to build out its skincare range.</p><p class="meta"><span class="tag t-business">Business</span><time datetime="2026-10-19T10:20:00+00:00">Oct 19, 10:20 UTC</time></p><p class="more">More: <a href="https://glossdaily.example/aurelia-marlowe" rel="noopener">Gloss Daily</a>, <a href="https://powderroom.example/aurelia-acquires-marlowe" rel="noopener">The Powder Room</a></p></div></article>
+<article class="story" data-tags="events"><div class="body"><h2><a href="https://tradebeauty.example/cosmo-expo-dubai" rel="noopener">Cosmo Expo Dubai 2026 opens with 400 brands</a> <span class="src">Trade Beauty Weekly</span></h2><p class="sum">Cosmo Expo Dubai has opened with around 400 brands taking part. Fragrance and skincare drew most of the attention on the first day.</p><p class="meta"><span class="tag t-events">Event</span><time datetime="2026-10-20T04:00:00+00:00">Oct 20, 4:00 UTC</time></p></div></article>
+<article class="story" data-tags="safety"><div class="body"><h2><a href="https://glossdaily.example/dune-beauty-spf-recall" rel="noopener">Dune Beauty recalls SPF 50 stick after contamination finding</a> <span class="src">Gloss Daily</span></h2><p class="sum">Dune Beauty is pulling a batch of its SPF 50 sunscreen sticks after a possible bacterial contamination was found. Anyone who owns one is told to stop using the affected lots.</p><p class="meta"><span class="tag t-safety">Safety</span><time datetime="2026-10-19T09:30:00+00:00">Oct 19, 9:30 UTC</time></p><p class="more">More: <a href="https://safetydesk.example/dune-beauty-recall" rel="noopener">Safety Desk</a>, <a href="https://powderroom.example/dune-recall" rel="noopener">The Powder Room</a></p></div><a class="thumb" href="https://glossdaily.example/dune-beauty-spf-recall" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/spf/240/240" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" title="Photo: Gloss Daily" onerror="this.parentNode.remove()"></a></article>
+<article class="story" data-tags="trending"><div class="body"><h2><a href="https://reddit.example/r/sample/lip-oil" rel="noopener">Anyone else obsessed with this $9 lip oil from Petal &amp; Pine?</a> <span class="src">r/SampleSkincare</span></h2><p class="sum">A Reddit post about a $9 Petal &amp; Pine lip oil is one of the day&#x27;s top posts in a skincare community, with people sharing whether they like it.</p><p class="meta"><span class="tag t-trending">Trending</span><span class="price" data-amt="9.0" data-cur="USD">$9</span><time datetime="2026-10-19T20:00:00+00:00">Oct 19, 20:00 UTC</time></p></div></article>
+<article class="story" data-tags="deals"><div class="body"><h2><a href="https://powderroom.example/petal-pine-mascara-sale" rel="noopener">Petal &amp; Pine mascara drops to £12 in early Black Friday sale</a> <span class="src">The Powder Room</span></h2><p class="sum">Petal &amp; Pine&#x27;s lengthening mascara is down to £12 as the brand starts its Black Friday sale early. The discount runs until Sunday, according to The Powder Room.</p><p class="meta"><span class="tag t-deals">Deal</span><span class="price" data-amt="12.0" data-cur="GBP">£12</span><time datetime="2026-10-19T08:00:00+00:00">Oct 19, 8:00 UTC</time></p></div><a class="thumb" href="https://powderroom.example/petal-pine-mascara-sale" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/mascara/240/240" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" title="Photo: The Powder Room" onerror="this.parentNode.remove()"></a></article>
+<article class="story" data-tags="safety"><div class="body"><h2><a href="https://mirror.example/roundup-1" rel="noopener">Sunscreen recall roundup for October</a> <span class="src">Mirror Feed</span></h2><p class="sum">This roundup collects the sunscreen recalls announced during October, in one list.</p><p class="meta"><span class="tag t-safety">Safety</span><time datetime="2026-10-19T10:00:00+00:00">Oct 19, 10:00 UTC</time></p></div></article>
+<article class="story" data-tags=""><div class="body"><h2><a href="https://skinnotes.example/marlowe-barrier-cream-review" rel="noopener">My honest review of the Marlowe Skin barrier cream</a> <span class="src">Skin Notes</span></h2><p class="sum">A blogger tried the barrier cream from Marlowe Skin for two weeks on dry cheeks and writes up how it went.</p><p class="meta"><time datetime="2026-10-19T07:00:00+00:00">Oct 19, 7:00 UTC</time></p></div></article>
+<article class="story" data-tags=""><div class="body"><h2><a href="https://glossdaily.example/retinol-niacinamide-layering" rel="noopener">How to layer retinol and niacinamide without irritation</a> <span class="src">Gloss Daily</span></h2><p class="sum">A dermatologist explains how to combine retinol and niacinamide in one routine, covering the order to apply them and how far apart to use them to keep irritation down.</p><p class="meta"><time datetime="2026-10-18T16:00:00+00:00">Oct 18, 16:00 UTC</time></p></div><a class="thumb" href="https://glossdaily.example/retinol-niacinamide-layering" tabindex="-1" aria-hidden="true"><img src="https://picsum.photos/seed/retinol/240/240" alt="" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" title="Photo: Gloss Daily" onerror="this.parentNode.remove()"></a></article>
+</main>
+<p id="empty" hidden>No stories under this filter right now.</p>
+<footer>
+  <p>9 stories from 8 sources. Updated <time id="upd" datetime="2026-10-20T06:00:00+00:00">Oct 20, 6:00 UTC</time>.</p>
+  <p>Every headline links to the outlet that published it. Summaries are written by an AI model from the headlines and can be wrong, so check the source before you buy anything. Thumbnails are loaded from the outlet's own site and belong to it.</p>
+  <p>Some links on this site may become affiliate links. When they do, we will say so next to the link, and we may earn a commission at no extra cost to you.</p>
+  <p>Prices shown in the headline's own currency. The converted amount is an estimate using <a href="https://www.exchangerate-api.com">ExchangeRate-API</a> rates (19 Oct 2026). Stores price differently by country, so check the store's own page.</p>
+</footer>
+</div>
+<script type="application/json" id="fx">{"base": "USD", "date": "19 Oct 2026", "rates": {"USD": 1, "AED": 3.6725, "SAR": 3.75, "GBP": 0.750306, "EUR": 0.890861, "INR": 95.184915, "PKR": 276.755441}}</script>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+function safe(f){try{return f()}catch(e){}}
+var FX=JSON.parse($('#fx').textContent);
+
+// filter chips
+var chips=$$('.chip'),stories=$$('.story');
+function setFilter(f){
+  var shown=0;
+  chips.forEach(function(c){var on=c.dataset.f===f;c.classList.toggle('on',on);c.setAttribute('aria-pressed',on)});
+  stories.forEach(function(s){var ok=f==='all'||s.dataset.tags.split(' ').indexOf(f)>-1;s.hidden=!ok;if(ok)shown++});
+  $('#empty').hidden=shown>0;
+  safe(function(){history.replaceState(null,'',f==='all'?location.pathname+location.search:'#'+f)});
+}
+chips.forEach(function(c){c.addEventListener('click',function(){setFilter(c.dataset.f)})});
+var h=location.hash.slice(1);
+setFilter(chips.some(function(c){return c.dataset.f===h})?h:'all');
+
+// currency: saved choice, else timezone, else language region, else USD (a guess; the menu overrides it)
+var TZ={'Asia/Dubai':'AED','Asia/Muscat':'OMR','Asia/Riyadh':'SAR','Asia/Qatar':'QAR','Asia/Kuwait':'KWD','Asia/Bahrain':'BHD','Asia/Karachi':'PKR','Asia/Kolkata':'INR','Asia/Calcutta':'INR','Asia/Dhaka':'BDT','Asia/Colombo':'LKR','Asia/Singapore':'SGD','Asia/Kuala_Lumpur':'MYR','Asia/Jakarta':'IDR','Asia/Manila':'PHP','Asia/Bangkok':'THB','Asia/Ho_Chi_Minh':'VND','Asia/Seoul':'KRW','Asia/Tokyo':'JPY','Asia/Shanghai':'CNY','Asia/Hong_Kong':'HKD','Asia/Taipei':'TWD','Asia/Jerusalem':'ILS','Asia/Amman':'JOD','Asia/Baghdad':'IQD','Europe/London':'GBP','Europe/Zurich':'CHF','Europe/Stockholm':'SEK','Europe/Oslo':'NOK','Europe/Copenhagen':'DKK','Europe/Warsaw':'PLN','Europe/Prague':'CZK','Europe/Budapest':'HUF','Europe/Istanbul':'TRY','America/Toronto':'CAD','America/Vancouver':'CAD','America/Edmonton':'CAD','America/Winnipeg':'CAD','America/Halifax':'CAD','America/Mexico_City':'MXN','America/Sao_Paulo':'BRL','America/Bogota':'COP','America/Santiago':'CLP','America/Lima':'PEN','Africa/Cairo':'EGP','Africa/Lagos':'NGN','Africa/Johannesburg':'ZAR','Africa/Nairobi':'KES','Africa/Casablanca':'MAD','Pacific/Auckland':'NZD'};
+var AREA={Europe:'EUR',America:'USD',Australia:'AUD'};
+var REG={AE:'AED',SA:'SAR',QA:'QAR',KW:'KWD',BH:'BHD',OM:'OMR',GB:'GBP',US:'USD',CA:'CAD',AU:'AUD',NZ:'NZD',IN:'INR',PK:'PKR',DE:'EUR',FR:'EUR',ES:'EUR',IT:'EUR',NL:'EUR',IE:'EUR',SG:'SGD',MY:'MYR',PH:'PHP',ZA:'ZAR',EG:'EGP',NG:'NGN',JP:'JPY',KR:'KRW',CN:'CNY',HK:'HKD',BR:'BRL',MX:'MXN',TR:'TRY',CH:'CHF',SE:'SEK',NO:'NOK',DK:'DKK',PL:'PLN'};
+function guess(){
+  var tz=safe(function(){return Intl.DateTimeFormat().resolvedOptions().timeZone})||'',c=TZ[tz]||AREA[tz.split('/')[0]];
+  var langs=navigator.languages||[navigator.language];
+  for(var i=0;!c&&i<langs.length;i++){var r=safe(function(){return new Intl.Locale(langs[i]).region});if(r&&REG[r])c=REG[r]}
+  return c&&FX.rates[c]?c:'USD';
+}
+var sel=$('#cur'),names=safe(function(){return new Intl.DisplayNames(['en'],{type:'currency'})});
+Object.keys(FX.rates).sort().forEach(function(code){
+  var o=document.createElement('option');o.value=code;o.textContent=code+(names?' - '+(safe(function(){return names.of(code)})||''):'');sel.appendChild(o);
+});
+function convert(to){
+  $$('.price').forEach(function(p){
+    var old=p.querySelector('.conv');if(old)old.remove();
+    var from=p.dataset.cur,amt=+p.dataset.amt;
+    if(from===to||!FX.rates[from]||!FX.rates[to])return;
+    var v=amt/FX.rates[from]*FX.rates[to];
+    var t=safe(function(){return new Intl.NumberFormat(undefined,{style:'currency',currency:to,maximumFractionDigits:v>=100?0:2}).format(v)})||(to+' '+v.toFixed(2));
+    var s=document.createElement('span');s.className='conv';s.textContent=' ≈ '+t;p.appendChild(s);
+  });
+}
+var cur=safe(function(){return localStorage.getItem('glow-cur')});
+if(!cur||!FX.rates[cur])cur=guess();
+sel.value=cur;convert(cur);
+sel.addEventListener('change',function(){safe(function(){localStorage.setItem('glow-cur',sel.value)});convert(sel.value)});
+
+// relative times, so a cached page never shows stale ages
+function ago(t){var m=Math.round((Date.now()-new Date(t))/6e4);return m<1?'just now':m<60?m+'m ago':m<1440?Math.round(m/60)+'h ago':Math.round(m/1440)+'d ago'}
+$$('time').forEach(function(t){var d=t.getAttribute('datetime');if(d&&t.id!=='upd'){t.title=t.textContent;t.textContent=ago(d)}});
+})();
+</script>
+</body>
+</html>
