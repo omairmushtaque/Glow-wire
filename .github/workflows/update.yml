@@ -28,6 +28,7 @@ jobs:
           path: |
             docs/summaries.json
             docs/rates.json
+            docs/articles.json
           key: cache-${{ github.run_id }}
           restore-keys: cache-
       - run: python3 test_update.py
