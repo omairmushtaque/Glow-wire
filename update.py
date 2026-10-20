@@ -140,7 +140,7 @@ def parse_feed(data):
         snippet = next((get(k) for k in ("description", "summary", "encoded", "content") if get(k)), "")
         title = get("title")
         if title and good_url(link) and date:
-            items.append({"title": title, "link": link.strip(), "published": date, "snippet": snippet[:400], "image": find_image(n, kids)})
+            items.append({"title": title, "link": link.strip(), "published": date, "snippet": snippet[:600], "image": find_image(n, kids)})
     return items
 
 
@@ -267,8 +267,8 @@ def check_summary(text, inputs):
     return ""
 
 
-def ask_model(prompt):
-    body = json.dumps({"model": os.getenv("SUMMARY_MODEL", "claude-haiku-5-5"), "max_tokens": 200, "system": SUMMARY_SYSTEM,
+def ask_model(prompt, system=SUMMARY_SYSTEM, model=None, max_tokens=200):
+    body = json.dumps({"model": model or os.getenv("SUMMARY_MODEL", "claude-haiku-5-5"), "max_tokens": max_tokens, "system": system,
                        "messages": [{"role": "user", "content": prompt}]}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={
         "x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01", "content-type": "application/json"})
@@ -340,7 +340,7 @@ def story_html(s):
             f'<p class="meta">{chips}{price}<time datetime="{e(s["published"])}">{human_time(s["published"])}</time></p>{more}</div>{img}</article>')
 
 
-def render(stories, rates, now, n_sources, sample):
+def render(stories, rates, now, n_sources, sample, briefs=""):
     labels = [(k, lab) for k, lab, _ in TAGS if any(k in s["tags"] for s in stories)]
     chips = '<button class="chip on" data-f="all">All</button>' + "".join(f'<button class="chip" data-f="{k}">{lab}</button>' for k, lab in labels)
     banner = '<p class="sample">Sample preview. These stories and outlets are made up so you can see the layout. The live site fills with real stories after its first scheduled update.</p>' if sample else ""
@@ -348,7 +348,7 @@ def render(stories, rates, now, n_sources, sample):
     page = (ROOT / "template.html").read_text()
     for k, v in {"SITE_NAME": html.escape(SITE_NAME), "TAGLINE": html.escape(TAGLINE), "CHIPS": chips, "STORIES": "\n".join(story_html(s) for s in stories),
                  "RATES_JSON": json.dumps(rates).replace("</", "<\\/"), "UPDATED_ISO": now.isoformat(), "UPDATED_HUMAN": human_time(now.isoformat()),
-                 "SOURCES": str(n_sources), "COUNT": str(len(stories)), "FX_DATE": html.escape(str(rates["date"])), "BANNER": banner, "ROBOTS": robots}.items():
+                 "SOURCES": str(n_sources), "COUNT": str(len(stories)), "FX_DATE": html.escape(str(rates["date"])), "BANNER": banner, "ROBOTS": robots, "BRIEFS": briefs}.items():
         page = page.replace("{{" + k + "}}", v)
     return page
 
@@ -392,9 +392,12 @@ def main():
     cache_f.write_text(json.dumps(cache, indent=1))
     print(f"summaries: {sum(bool(s['summary']) for s in stories)} of {len(stories)} stories ({new} new)")
 
+    import articles  # beauty desk; needs the stories' source text, so it runs before "_inputs" is dropped
+    css = re.search(r"<style>(.*?)</style>", (ROOT / "template.html").read_text(), re.S).group(1)
+    briefs = articles.run(stories, out, now, Path(a.fixtures) if a.fixtures else None, css)
     for s in stories: s.pop("_inputs")
     rates = get_rates(out, now)
-    (out / "index.html").write_text(render(stories, rates, now, ok, bool(a.fixtures)))
+    (out / "index.html").write_text(render(stories, rates, now, ok, bool(a.fixtures), briefs))
     (out / "data.json").write_text(json.dumps({"updated": now.isoformat(), "stories": stories}, indent=1))
     (out / "health.json").write_text(json.dumps({"updated": now.isoformat(), "healthy": ok, "total": len(feeds), "feeds": health}, indent=1))
     print(f"wrote {out}/index.html")

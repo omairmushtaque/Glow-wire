@@ -12,6 +12,17 @@ A one-page, self-updating women's beauty news hub. It reads 54 feeds, groups hea
 
 Cost: GitHub is free for this. Summaries use Claude Haiku and only run for new stories (a few cents a day).
 
+## Beauty desk (articles)
+
+Needs the `ANTHROPIC_API_KEY` secret. Without it no articles are written. Each run it picks a story that two or more outlets cover, has a photo, and is a launch, deal, event, business or trending story (recalls are never rewritten). It writes a short brief, then runs these checks. Failing any one means no article:
+
+- Only facts from the source headlines and snippets. Every number must appear in the sources. Every name must appear in the sources.
+- No health or medical wording unless a source says it and the sentence names who said it.
+- No "I tried" or "we tested". No AI-sounding patterns. No copied runs of 6+ words.
+- A second model call checks every sentence against the sources and flags anything unsupported.
+
+Limits: 1 new article per run and 5 per day (`ARTICLES_PER_DAY`). Set `ARTICLES=off` in the workflow to stop it. Articles use only headlines and the snippet each feed gives, so they are short briefs. The photo is the outlet's own, shown from their site with a credit.
+
 ## What it checks before it publishes
 
 - Feeds that are broken, empty or silent for 45+ days are skipped and listed in `health.json`.

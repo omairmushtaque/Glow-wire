@@ -45,6 +45,14 @@ h2 a:hover{text-decoration:underline;text-underline-offset:3px}
 .more a{text-underline-offset:3px}
 .thumb{flex:none;width:88px;height:88px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--gray)}
 .thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.briefs{padding-top:8px;padding-bottom:8px}.briefs h3{font:600 12px/1 "SF Pro Text","Helvetica Neue",system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--mute);margin:0 0 12px}
+.brief-grid{display:grid;gap:16px;grid-template-columns:1fr}
+.brief{display:block;text-decoration:none;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+.brief:hover b{text-decoration:underline;text-underline-offset:3px}
+.brief img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--gray)}
+.brief div{padding:16px}.brief b{display:block;font:600 18px/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.01em}
+.brief span{display:block;margin-top:6px;font-size:14px;color:var(--mute)}
+@media (min-width:640px){.brief-grid{grid-template-columns:1fr 1fr}}
 #empty{padding:32px 0;color:var(--mute)}
 footer{padding:32px 0 56px;font-size:13px;color:var(--mute)}
 footer p{margin:0 0 12px;max-width:62ch}
@@ -62,6 +70,9 @@ footer p{margin:0 0 12px;max-width:62ch}
   </div>
   {{BANNER}}
 </header>
+</div>
+{{BRIEFS}}
+<div class="wrap">
 <main id="list">
 {{STORIES}}
 </main>
